@@ -4,11 +4,9 @@ Set Up
 - Create a new react app called `lecture-app`
 - Create a class based component called `AppContainer` with the text `React Routes Lecture`
 - Reference the `AppContainer` component in App.js
-
 - Create a class based component called `FilmList`
 - Display a the name and description of Studio Ghibli films from this api : https://ghibliapi.herokuapp.com/films 
 - Reference the `FilmList` component in the `AppContainer` component
-
 - Create a class based component called `DrinkList`
 - Display a the name and instructions of drinks from this api : https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a
 - Reference the `DrinkList` component in the `AppContainer` component
@@ -20,3 +18,12 @@ Using Routes
 - Remove the `FilmList` and `DrinkList` components from the `AppContainer` component
 - Create a link and route for the `FilmList` component in the `AppContainer` component
 - Create a link and route for the `DrinkList` component in the `AppContainer` component
+
+Route Syntax
+````JSX
+<Router>
+    <Link to="/">Home</Link> 
+    <Link to="/url-path-one">Link Text</Link>
+    <Route path="/url-path-one"><ComponentName/></Route>
+</Router>
+````
