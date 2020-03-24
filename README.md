@@ -5,7 +5,7 @@ Set Up
 - Create a class based component called `AppContainer` with the text `React Routes Lecture`
 - Reference the `AppContainer` component in App.js
 - Create a class based component called `FilmList`
-- Display a the name and description of Studio Ghibli films from this api : https://ghibliapi.herokuapp.com/films 
+- Display the name and description of Studio Ghibli films from this api : https://ghibliapi.herokuapp.com/films 
 - Reference the `FilmList` component in the `AppContainer` component
 - Create a class based component called `DrinkList`
 - Display a the name and instructions of drinks from this api : https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a

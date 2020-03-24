@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class DrinkList extends Component {
     constructor(props) {
@@ -7,29 +7,34 @@ class DrinkList extends Component {
             listOfDrinks: []
         }
     }
-    componentDidMount() {
+
+    componentDidMount = () => {
         this.loadData();
     }
+
     loadData = async () => {
-        console.log("Fetching Drinks!");
         const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
         const json = await response.json();
         console.table(json.drinks);
         this.setState({ listOfDrinks: json.drinks });
     }
+
     render() {
         return (
-            this.state.listOfDrinks.map((drink) => {
-                return (
-                    <div key={drink.idDrink}>
-                        <p>Drink Name : {drink.strDrink}</p>
-                        <p>Drink Instructions :{drink.strInstructions}</p>
-                        <hr/>
-                    </div>
-                )
-            }
-            )
-        );
+            <Fragment>
+                <h1>List of Drinks</h1>
+                {
+                    this.state.listOfDrinks.map((drink) => {
+                        return (
+                            <div key={drink.idDrink}>
+                                <p>Drink Name: {drink.strDrink}</p>
+                                <p>Drink Instructions : {drink.strInstructions}</p>
+                            </div>
+                        )
+                    })
+                }
+            </Fragment>
+        )
     }
 }
 
