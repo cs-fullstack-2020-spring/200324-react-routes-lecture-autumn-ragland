@@ -1,16 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import FilmList from './FilmList'
 import DrinkList from './DrinkList';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom' // imports to use Router
 
 class AppContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-
+// display title with links to home, film list, and drink list
     render() {
         return (
             <Fragment>
